@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
 import traceback
-from utils.preprocess import preprocess_input  # 👈 new import
+from utils.preprocess import preprocess_input
 
 # Initialize Flask app
 app = Flask(__name__)
@@ -14,18 +14,31 @@ model = joblib.load("model/xgboost_crime_model.pkl")
 target_encoder = joblib.load("model/target_encoder.pkl")
 feature_columns = joblib.load("model/feature_columns.pkl")
 
+# === HOME ===
+@app.route('/')
+def home():
+    return """
+    <h2>🧠 Crime Prediction API</h2>
+    <p>Welcome! This API uses machine learning to predict crime categories.</p>
+    <ul>
+        <li>✅ <code>GET /ping</code> – Check API status</li>
+        <li>🎯 <code>POST /predict</code> – Get a crime prediction from your input</li>
+    </ul>
+    """
+
+# === HEALTH CHECK ===
 @app.route('/ping', methods=['GET'])
 def ping():
     return jsonify({"message": "API is up and running!"})
 
+# === PREDICT ===
 @app.route('/predict', methods=['POST'])
 def predict():
     try:
-        # Convert incoming JSON to DataFrame
         data = request.get_json()
         input_df = pd.DataFrame([data])
 
-        # Preprocess input using encoding logic
+        # Preprocess input
         input_df = preprocess_input(input_df)
 
         # Make prediction
@@ -44,4 +57,3 @@ if __name__ == '__main__':
     import os
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
-
