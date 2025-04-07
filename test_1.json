@@ -1,0 +1,19 @@
+{
+  "Hour": 14,
+  "DayOfWeek": "Friday",
+  "PremiseType": "STREET",
+  "Weapon": "NONE",
+  "Race": "White",
+  "Sex": "M",
+  "Age": 25,
+  "Total_Population": 15000,
+  "Male_Population": 7400,
+  "Dew_Point_C": 10,
+  "Wet_Bulb_Temperature_C": 12,
+  "Specific_Humidity_2m": 0.006,
+  "Precipitation_mm": 0.0,
+  "Wind_Speed_50m_mps": 2.5,
+  "Weather_Category": "Clear",
+  "Income_Level": "Medium",
+  "Employment_Status": "Employed"
+}

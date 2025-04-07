@@ -1,0 +1,19 @@
+{
+  "Hour": 23,
+  "DayOfWeek": "Saturday",
+  "PremiseType": "BAR/NIGHTCLUB",
+  "Weapon": "KNIFE",
+  "Race": "Black",
+  "Sex": "M",
+  "Age": 31,
+  "Total_Population": 18000,
+  "Male_Population": 8900,
+  "Dew_Point_C": 16,
+  "Wet_Bulb_Temperature_C": 18,
+  "Specific_Humidity_2m": 0.0075,
+  "Precipitation_mm": 0.2,
+  "Wind_Speed_50m_mps": 1.9,
+  "Weather_Category": "Rainy",
+  "Income_Level": "Low",
+  "Employment_Status": "Unemployed"
+}

@@ -1,0 +1,19 @@
+{
+  "Hour": 21,
+  "DayOfWeek": "Wednesday",
+  "PremiseType": "GAS STATION",
+  "Weapon": "FIREARM",
+  "Race": "Other",
+  "Sex": "M",
+  "Age": 28,
+  "Total_Population": 12000,
+  "Male_Population": 6200,
+  "Dew_Point_C": 12,
+  "Wet_Bulb_Temperature_C": 14,
+  "Specific_Humidity_2m": 0.0059,
+  "Precipitation_mm": 0.0,
+  "Wind_Speed_50m_mps": 2.0,
+  "Weather_Category": "Cloudy",
+  "Income_Level": "Low",
+  "Employment_Status": "Employed"
+}
