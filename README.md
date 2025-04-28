@@ -68,8 +68,5 @@ crime-prediction-api/
 
 ---
 
-## 📫 Contact
-For questions or collaborations: **[your.email@example.com]**
 
----
 
