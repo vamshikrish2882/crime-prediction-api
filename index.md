@@ -72,7 +72,7 @@ XGBClassifier(
     eval_metric='mlogloss',
     use_label_encoder=False,
     random_state=42
-)
+)```
 These parameters allowed the model to efficiently capture interactions among weather, time, and socioeconomic factors while minimizing overfitting.
 
 ---
