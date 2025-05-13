@@ -24,9 +24,9 @@ Traditional crime dashboards often present static, historical data that can be h
 ## 🧾 Data Collection and Feature Engineering
 
 Three primary datasets were used:
-- 🕵️‍♂️ **Baltimore Police crime records(2011-2024)**
+- 🕵️‍♂️ **Baltimore Police crime records (2011–2024)**
 - 🌦️ **NASA POWER weather reports**
-- 🧑‍🏫 **Neighborhood demographic data - ACS 5 year**
+- 🧑‍🏫 **Neighborhood demographic data - ACS 5-year**
 
 The `build_features.py` module transforms these into 37+ features:
 - **Time-based**: Hour, Day of Week, Month, Year  
@@ -39,7 +39,7 @@ This dynamic pipeline ensures predictions are grounded in real-world, real-time 
 
 ---
 
-## 🤖 Model Training: XGBoost Classifier
+## 🤖 Model Training and Performance (XGBoost)
 
 ### Training Process:
 - Cleaned and merged datasets
@@ -57,8 +57,6 @@ XGBoost was chosen for its robustness on structured data and support for class i
 
 ### 🔧 Best Model Parameters
 
-The best configuration found during tuning was:
-
 ```python
 XGBClassifier(
     subsample=0.8,
@@ -72,7 +70,8 @@ XGBClassifier(
     eval_metric='mlogloss',
     use_label_encoder=False,
     random_state=42
-)```
+)
+```
 These parameters allowed the model to efficiently capture interactions among weather, time, and socioeconomic factors while minimizing overfitting.
 
 ---
