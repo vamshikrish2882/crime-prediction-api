@@ -24,9 +24,9 @@ Traditional crime dashboards often present static, historical data that can be h
 ## 🧾 Data Collection and Feature Engineering
 
 Three primary datasets were used:
-- 🕵️‍♂️ **Baltimore Police crime records**
-- 🌦️ **NOAA weather reports**
-- 🧑‍🏫 **Neighborhood demographic data**
+- 🕵️‍♂️ **Baltimore Police crime records(2011-2024)**
+- 🌦️ **NASA POWER weather reports**
+- 🧑‍🏫 **Neighborhood demographic data - ACS 5 year**
 
 The `build_features.py` module transforms these into 37+ features:
 - **Time-based**: Hour, Day of Week, Month, Year  
@@ -74,6 +74,8 @@ XGBClassifier(
     random_state=42
 )
 These parameters allowed the model to efficiently capture interactions among weather, time, and socioeconomic factors while minimizing overfitting.
+
+---
 
 ### 🧠 Natural Language Input Handling
 
